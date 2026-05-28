@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-label="ReconEternal mark">
+  <circle cx="50" cy="50" r="40"></circle>
+  <circle cx="50" cy="50" r="22" stroke-dasharray="1.5 4" stroke-opacity="0.55"></circle>
+  <line x1="50" y1="50" x2="78" y2="22"></line>
+  <circle cx="78" cy="22" r="2.8" fill="currentColor" stroke="none"></circle>
+  <circle cx="50" cy="50" r="1.8" fill="currentColor" stroke="none"></circle>
+</svg>
