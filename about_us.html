@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Anti-flash script: reads the saved theme from storage and applies it
+       before the page renders, preventing a visible flicker on load -->
+  <script>try{var __t=localStorage.getItem('re-theme')||sessionStorage.getItem('re-theme');if(__t==='light')document.documentElement.dataset.theme='light';}catch(e){}</script>
+
+  <!-- Tells the browser to match the device width and not zoom on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Browser tab title -->
+  <title>About — CyberIntact</title>
+
+  <!-- Description shown by search engines in results -->
+  <meta name="description" content="A small consultancy. A doctrine built around patience, restraint, and accuracy." />
+
+  <!-- SVG favicon shown in the browser tab -->
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+
+  <!-- Early DNS connections for Google Fonts to reduce load time -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Load the Archivo and JetBrains Mono font families from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Site header ────────────────────────────────────────────────────
+       Sticky header spanning the full viewport width. The inner .wrap div
+       constrains the nav content to the max-width like the rest of the page. -->
+  <header>
+  <div class="wrap">
+
+    <!-- Primary navigation bar -->
+    <nav class="nav" aria-label="Primary">
+
+      <!-- Logo lockup: SVG icon + wordmark, links back to the homepage -->
+      <a class="lockup" href="index.html">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true">
+          <circle cx="50" cy="50" r="40"/>
+          <circle cx="50" cy="50" r="22" stroke-dasharray="1.5 4" stroke-opacity="0.55"/>
+          <line x1="50" y1="50" x2="78" y2="22"/>
+          <circle cx="78" cy="22" r="2.8" fill="currentColor" stroke="none"/>
+          <circle cx="50" cy="50" r="1.8" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>CYBER<em>intact</em></span>
+      </a>
+
+      <!-- Navigation links. "About us" has .active since this is the About page. -->
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="about_us.html">About us</a></li>
+        <li><a class="cta" href="brief.html">Brief us</a></li>
+      </ul>
+
+      <!-- Dark / light theme toggle button. Icons are swapped via CSS. -->
+      <button class="theme-toggle" aria-label="Switch to light theme">
+        <!-- Sun icon: shown in dark mode -->
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon: shown in light mode -->
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ── Page hero ─────────────────────────────────────────────────────
+         Inner-page hero with the section heading. -->
+    <section class="phero">
+      <h1>A small consultancy.<br><em>Deliberately built.</em></h1>
+    </section>
+
+    <!-- ── About body copy ───────────────────────────────────────────────
+         Two paragraphs introducing who CyberIntact is and how they work. -->
+    <section style="padding:0 0 68px; max-width:62ch;">
+      <p style="font-size:17px; line-height:1.7; color:var(--text-hi); margin:0 0 22px; text-wrap:pretty;">We are a small group of operators with backgrounds in threat intelligence, adversary simulation, and incident response across critical infrastructure. We built CyberIntact because the firms we had worked with were either too large to be precise or too narrow to be useful.</p>
+      <p style="font-size:17px; line-height:1.7; color:var(--text-lo); margin:0; text-wrap:pretty;">Every engagement is run by the people who scoped it. The operator who takes your brief is the operator who does the work. We are privately held, take no outside investment, and cap our partner count at five. That is what lets us turn down work that does not fit.</p>
+    </section>
+
+    <!-- ── Doctrine section ──────────────────────────────────────────────
+         Four numbered principles that define how CyberIntact operates.   -->
+    <section style="border-top:1px solid var(--rule-d); padding:52px 0 68px;">
+
+      <!-- Section label -->
+      <div style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted-d); margin-bottom:40px;">The doctrine</div>
+
+      <!-- Numbered list of doctrine principles -->
+      <ol class="doctrine" style="list-style:none; padding:0; margin:0; max-width:62ch; display:grid; gap:0;">
+
+        <!-- Principle 01 -->
+        <li style="display:grid; grid-template-columns:36px 1fr; gap:18px; padding:24px 0; border-top:1px solid var(--rule-d);">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--amber); padding-top:3px; letter-spacing:0.1em;">01</span>
+          <div>
+            <b style="font-weight:600; font-size:15.5px; letter-spacing:-0.01em; display:block; margin-bottom:9px;">We take our time.</b>
+            <p style="font-size:14px; line-height:1.6; color:var(--text-lo); margin:0;">Good security cannot be rushed. We take time to properly understand your environment before making any recommendations. Getting it right matters more than getting it done quickly.</p>
+          </div>
+        </li>
+
+        <!-- Principle 02 -->
+        <li style="display:grid; grid-template-columns:36px 1fr; gap:18px; padding:24px 0; border-top:1px solid var(--rule-d);">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--amber); padding-top:3px; letter-spacing:0.1em;">02</span>
+          <div>
+            <b style="font-weight:600; font-size:15.5px; letter-spacing:-0.01em; display:block; margin-bottom:9px;">We keep things focused.</b>
+            <p style="font-size:14px; line-height:1.6; color:var(--text-lo); margin:0;">When every alert demands attention, none of them get it. We reduce the noise so your team can focus on what genuinely requires their time and judgment.</p>
+          </div>
+        </li>
+
+        <!-- Principle 03 -->
+        <li style="display:grid; grid-template-columns:36px 1fr; gap:18px; padding:24px 0; border-top:1px solid var(--rule-d);">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--amber); padding-top:3px; letter-spacing:0.1em;">03</span>
+          <div>
+            <b style="font-weight:600; font-size:15.5px; letter-spacing:-0.01em; display:block; margin-bottom:9px;">We only deliver what we can stand behind.</b>
+            <p style="font-size:14px; line-height:1.6; color:var(--text-lo); margin:0;">We do not produce reports full of uncertainty. Every finding we deliver is verified, ranked by priority, and paired with clear actions so your team always knows what to do next.</p>
+          </div>
+        </li>
+
+        <!-- Principle 04 -->
+        <li style="display:grid; grid-template-columns:36px 1fr; gap:18px; padding:24px 0; border-top:1px solid var(--rule-d);">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--amber); padding-top:3px; letter-spacing:0.1em;">04</span>
+          <div>
+            <b style="font-weight:600; font-size:15.5px; letter-spacing:-0.01em; display:block; margin-bottom:9px;">We stay small on purpose.</b>
+            <p style="font-size:14px; line-height:1.6; color:var(--text-lo); margin:0;">The person you speak to is the person who does the work. No handoffs, no account managers, no junior staff learning on your time. We turn down work that is not the right fit. That is how we protect the quality of everything we take on.</p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ── Bottom CTA strip ──────────────────────────────────────────────
+         Closing prompt that leads visitors to the Brief page.            -->
+    <section style="border-top:1px solid var(--rule-d); padding:48px 0 60px; display:flex; justify-content:space-between; align-items:center; gap:40px; flex-wrap:wrap;">
+      <p style="font-size:20px; font-weight:600; letter-spacing:-0.02em; margin:0; line-height:1.2;">If the fit is there, we will know it in thirty minutes.</p>
+      <a class="btn primary" href="brief.html">Brief us</a>
+    </section>
+
+    <!-- ── Site footer ────────────────────────────────────────────────── -->
+    <footer class="site">
+      <span>© 2026 CyberIntact Ltd.</span>
+      <span>Security, made intact.</span>
+    </footer>
+  </main>
+
+  <!-- Main JavaScript: theme toggle, sticky header, scroll-reveal -->
+  <script src="site.js"></script>
+</body>
+</html>
